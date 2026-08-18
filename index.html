@@ -1,26 +1,82 @@
 <!DOCTYPE html>
-<html>  
+<html>
 <head>
-    <title>JARVIS</title>
+<title>JARVIS</title>
+
+<style>
+body {
+background: #050505;
+color: #00e5ff;
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 40px;
+}
+
+h1 {
+font-size: 42px;
+letter-spacing: 5px;
+}
+
+#screen {
+max-width: 700px;
+margin: 30px auto;
+min-height: 250px;
+border: 1px solid #00e5ff;
+padding: 20px;
+text-align: left;
+background: #0b0b0b;
+}
+
+#input {
+width: 70%;
+padding: 12px;
+background: #111;
+color: white;
+border: 1px solid #00e5ff;
+}
+
+button {
+padding: 12px 20px;
+margin-left: 8px;
+background: #00e5ff;
+border: none;
+cursor: pointer;
+}
+</style>
 </head>
 
 <body>
-     <h1>JARVIS ONLINE</h1>\
-     <p>Systems test successful.</p>
-    
-    <button id="speakButton">TEST JARVIS VOICE</button>
 
-             <script>
-document.getElementById("speakButton").onclick = Function() {
-                                                       Let speech = New
-SpeechSynthesisUtterance();
-             speech.text = "Hello sir. JARVIS is online.";
-                                                  speech.volume =1;
-                                                   speech.rate = 0.9;     
-                                                  speech.pitch = 1;
+<h1>JARVIS</h1>
+<p>PERSONAL ASSISTANT SYSTEM</p>
 
+<div id="screen">
+<p><strong>JARVIS:</strong> Systems online, sir.</p>
+</div>
 
-window.speechSynthesis.speak(speech);};                 
-     </script>    
+<input id="input" type="text" placeholder="Enter a command...">
+<button onclick="sendCommand()">SEND</button>
+
+<script>
+Function sendCommand() {
+Const input = document.getElementById("input");
+Const screen = document.getElementById("screen");
+
+Const command = input.value;
+
+If (command.trim() === "") {
+Return;
+}
+
+screen.innerHTML +=
+"<p><strong>YOU:</strong> " + command + "</p>";
+
+screen.innerHTML +=
+"<p><strong>JARVIS:</strong> Command received, sir.</p>";
+
+input.value = "";
+}
+</script>
+
 </body>
 </html>
