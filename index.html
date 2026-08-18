@@ -7,5 +7,20 @@
 <body>
      <h1>JARVIS ONLINE</h1>\
      <p>Systems test successful.</p>
+    
+    <button id="speakButton">TEST JARVIS VOICE</button>
+
+             <script>
+document.getElementById("speakButton").onclick = Function() {
+                                                       Let speech = New
+SpeechSynthesisUtterance();
+             speech.text = "Hello sir. JARVIS is online.";
+                                                  speech.volume =1;
+                                                   speech.rate = 0.9;     
+                                                  speech.pitch = 0.8;
+
+
+window.speechSynthesis.speak(speech);};                 
+     </script>    
 </body>
 </html>
