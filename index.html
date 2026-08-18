@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
-<Head>
+<head>
        <title>JARVIS</title>
-</Head>       
-<body>   
-  <h1>JARvis Online</h1>
-  <p>Systems initialized.</p>
+</head>
+<body>      
+       
+<h1>JARVIS ONLINE</h1>
+<p>Systems initialized.</p>
 
-  <button onclick="speak()">Activate JARVIS</button>
+<button id="jarvisButton">ACTIVATE JARVIS</button>
 
-  <script>
-       function speak() {
-           const message = new SpeechSyntheisUtterance(
-                "Good afternoon, sir. Jarvis is online and ready."
-            );
+<script>
+const button = document.getElementById("jarvisButton");
 
-            message.rate = 0.9;
-            message.pitch = 0.8;
-    
-    
+button.addEventsListener("click", function () {
+     const voice = new SpeechSynthesisUtterance(
+            "Good afternoon, sir. Jarvis is online and ready."
+      );      
