@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<Head>
+       <title>JARVIS</title>
+</Head>       
+<body>   
+  <h1>JARvis Online</h1>
+  <p>Systems initialized.</p>
+
+  <button onclick="speak()">Activate JARVIS</button>
+
+  <script>
+       function speak() {
+           const message = new SpeechSyntheisUtterance(
+                "Good afternoon, sir. Jarvis is online and ready."
+            );
+
+            message.rate = 0.9;
+            message.pitch = 0.8;
+    
+    
