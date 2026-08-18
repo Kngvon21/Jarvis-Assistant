@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-       <title>JARVIS</title>
-</head>
-<body>      
-       
-<h1>JARVIS ONLINE</h1>
-<p>Systems initialized.</p>
+<html>  
+<body>
 
-<button id="jarvisButton">ACTIVATE JARVIS</button>
+<button onclick="window.speechSynthesis.speak( SpeechSynthesisUtterance('Hello sir'))       
+     TEST JARVIS VOICE     
+</button>
+</body>
+</html>
 
-<script>
-const button = document.getElementById("jarvisButton");
 
-button.addEventsListener("click", function () {
-     const voice = new SpeechSynthesisUtterance(
-            "Good afternoon, sir. Jarvis is online and ready."
-      );      
+
